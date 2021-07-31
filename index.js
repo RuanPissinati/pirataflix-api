@@ -7,6 +7,7 @@ const mongoose = require('./src/database');
 const helmet = require('helmet');
 const bodyParser = require('body-parser');
 const routes = require('./src/routes');
+const config = require('./src/config');
 
 
 
@@ -21,4 +22,4 @@ mongoose.connect();
 
 // app.use('/api', routes);
 
-app.listen(3333, console.log(' ** API is running **'));
+app.listen(config.app.port, config.app.url,console.log(' ** API is running **'));
