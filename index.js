@@ -22,4 +22,4 @@ mongoose.connect();
 
 // app.use('/api', routes);
 
-app.listen(config.app.port, config.app.url,console.log(' ** API is running **'));
+app.listen(process.env.PORT, console.log(' ** API is running **'));
